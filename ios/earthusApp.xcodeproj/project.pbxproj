@@ -20,6 +20,7 @@
 		5740CA145B2EA5B102206924 /* libPods-earthusApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADECF22BE11CF5B038FFBF71 /* libPods-earthusApp-tvOS.a */; };
 		73692F5A796A3CE74CCFDF3D /* libPods-earthusApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A47B75B834A387A408055C5 /* libPods-earthusApp.a */; };
 		88B30756AACA42A7A9F950BC /* libPods-earthusApp-earthusAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2161B0A5DADA6E6188F9CA3B /* libPods-earthusApp-earthusAppTests.a */; };
+		EE1C0FE6248FFA5C008E9A49 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1C0FE5248FFA5C008E9A49 /* SplashScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C3BA48A707D77EB1DF96CAD8 /* Pods-earthusApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-earthusApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-earthusApp-tvOSTests/Pods-earthusApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		EE1C0FE5248FFA5C008E9A49 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				EE1C0FE5248FFA5C008E9A49 /* SplashScreen.storyboard */,
 			);
 			name = earthusApp;
 			sourceTree = "<group>";
@@ -161,7 +164,6 @@
 				B83BA99BC07C442055F72AE0 /* Pods-earthusApp-tvOSTests.debug.xcconfig */,
 				C3BA48A707D77EB1DF96CAD8 /* Pods-earthusApp-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -339,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				EE1C0FE6248FFA5C008E9A49 /* SplashScreen.storyboard in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
