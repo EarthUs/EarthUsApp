@@ -1,14 +1,6 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {StatusBar} from 'react-native';
 import Navigator from '~/Screens/Navigator';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import {UserContextProvider} from '~/Context/User';
 const App = () => {
