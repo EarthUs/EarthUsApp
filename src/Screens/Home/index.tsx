@@ -1,6 +1,7 @@
 import React, {useContext, useLayoutEffect, useEffect} from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import {StackNavigationProp} from '@react-navigation/stack';
+import {StackNavigationProp, HeaderStyleInterpolators} from '@react-navigation/stack';
+import LinearGradient from 'react-native-linear-gradient';
 import Styled from 'styled-components/native';
 
 import {UserContext} from '~/Context/User';
@@ -8,7 +9,7 @@ import {Text} from 'react-native';
 
 const Container = Styled.ScrollView`
   flex: 1;
-  background-color: #141414;
+  background-color: transparent;
 `;
 
 const StyleButton = Styled.TouchableOpacity`
@@ -36,16 +37,23 @@ const Home = ({navigation}: Props) => {
         </StyleButton>
       ),
     });
-  }, []);
+  }, [logout, navigation]);
 
   useEffect(() => {
     SplashScreen.hide();
   }, []);
 
   return (
-    <Container>
-      <Text>Hi</Text>
-    </Container>
+    <LinearGradient
+      colors={['#f85b00', '#ffffff', '#ffffff']}
+      style={{
+        alignItems: 'center',
+        height: 900,
+      }}>
+      <Container>
+        <Text>Hi</Text>
+      </Container>
+    </LinearGradient>
   );
 };
 
