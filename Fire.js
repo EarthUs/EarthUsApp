@@ -73,15 +73,14 @@ class Fire {
     return uploadPhoto(uri, path);
   };
 
-  post = async ({ text, image: localUri }) => {
+  post = async ({ image: localUri }) => {
     try {
       const { uri: reducedImage, width, height } = await shrinkImageAsync(
         localUri,
       );
 
       const remoteUri = await this.uploadPhotoAsync(reducedImage);
-      this.collection.add({
-        text,
+      await this.collection.add({
         uid: this.uid,
         timestamp: this.timestamp,
         imageWidth: width,
@@ -89,9 +88,9 @@ class Fire {
         image: remoteUri,
         user: getUserInfo(),
       }).then(() => {
-        console.log("Document written Uri: " + localUri);
+        console.log("Document written Uri: " + remoteUri);
         const body = new FormData
-        body.append("images_file", localUri)
+        body.append("url", remoteUri)
         body.append("", "\\")
         body.append("classifier_ids", "garbage_1414697122")
         body.append("", "\\")
@@ -107,7 +106,8 @@ class Fire {
           .then(response => response.json())
           .then(json => {
             // 받은 json으로 기능 구현
-            console.log(json);
+            image_class = JSON.stringify(json);
+            return Promise.resolve(image_class);
           });
       });
 
