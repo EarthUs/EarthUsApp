@@ -1,8 +1,22 @@
-# Expo Firebase Instagram
+# EarthUs - Frontend (Mobile Application)
 
-Made with Expo & Web Firebase SDK
+    지구와 우리를 위한 쓰레기 수거 챌린지 서비스 🌎💚
 
-Tutorial: https://blog.expo.io/instagram-clone-using-firebase-react-native-expo-cc32f61c7bba
+
+### 📚 기술 스택
+|Language|Library|
+|:---:|:---:|
+|Javascript|ReactNative|
+
+### 📌 주요 기능
+
+* 쓰레기 수거 인증 SNS
+* 쓰레기 수거율 통계
+    * 지역별
+    * 쓰레기 분류별
+* 날씨 정보 제공
+
+------
 
 ## Getting Started
 
