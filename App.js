@@ -9,6 +9,7 @@ import tabBarIcon from './utils/tabBarIcon';
 import FeedScreen from './screens/FeedScreen';
 import NewPostScreen from './screens/NewPostScreen';
 import SelectPhotoScreen from './screens/SelectPhotoScreen';
+import StatisticsScreen from './screens/StatisticsScreen';
 
 // Create our main tab navigator for moving between the Feed and Photo screens
 const navigator = createBottomTabNavigator(
@@ -27,6 +28,12 @@ const navigator = createBottomTabNavigator(
       screen: SelectPhotoScreen,
       navigationOptions: {
         tabBarIcon: tabBarIcon('add-circle'),
+      },
+    },
+    Statistics: {
+      screen: StatisticsScreen,
+      navigationOptions: {
+        tabBarIcon: tabBarIcon('insert-chart'),
       },
     },
   },
