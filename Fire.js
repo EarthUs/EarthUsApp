@@ -1,27 +1,18 @@
 import uuid from 'uuid';
-
+import getEnvVars from '../environment';
 import getUserInfo from './utils/getUserInfo';
 import shrinkImageAsync from './utils/shrinkImageAsync';
 import uploadPhoto from './utils/uploadPhoto';
+
+const { collectionName, firebaseKey } = getEnvVars();
 
 const firebase = require('firebase');
 // Required for side-effects
 require('firebase/firestore');
 
-const collectionName = 'earthus-90e16';
-
 class Fire {
   constructor() {
-    firebase.initializeApp({
-      apiKey: "AIzaSyA0Ts68-a6uv8WtppxD1PTKhhr84NY0_a4",
-      authDomain: "earthus-90e16.firebaseapp.com",
-      databaseURL: "https://earthus-90e16.firebaseio.com",
-      projectId: "earthus-90e16",
-      storageBucket: "earthus-90e16.appspot.com",
-      messagingSenderId: "715002742933",
-      appId: "1:715002742933:web:a23a69b13a9674cfdd739c",
-      measurementId: "G-N9529T7NSZ"
-    });
+    firebase.initializeApp(firebaseKey);
     // Some nonsense...
     firebase.firestore().settings({ timestampsInSnapshots: true });
 
