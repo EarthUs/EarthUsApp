@@ -1,5 +1,5 @@
 import uuid from 'uuid';
-import getEnvVars from '../environment';
+import getEnvVars from './environment';
 import getUserInfo from './utils/getUserInfo';
 import shrinkImageAsync from './utils/shrinkImageAsync';
 import uploadPhoto from './utils/uploadPhoto';
